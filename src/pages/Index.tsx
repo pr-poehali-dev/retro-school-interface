@@ -31,20 +31,23 @@ const Index = () => {
       <main className="max-w-6xl mx-auto px-4 sm:px-8 py-12">
         <section className="mb-20 text-center animate-fade-in">
           <div className="mb-8">
-            <h2 className="text-4xl sm:text-6xl md:text-7xl mb-6" style={{ fontFamily: 'Press Start 2P, monospace', lineHeight: '1.3' }}>
-              # Unlock the Secrets of Code
+            <h2 className="text-4xl sm:text-6xl md:text-7xl mb-6 animate-pulse" style={{ fontFamily: 'Press Start 2P, monospace', lineHeight: '1.3' }}>
+              # Unlock the Secrets of Code 🚀
             </h2>
-            <p className="text-xl sm:text-2xl text-muted-foreground mb-8" style={{ fontFamily: 'VT323, monospace' }}>
-              Научись программировать в стиле 80-х с современными технологиями
+            <p className="text-xl sm:text-2xl text-muted-foreground mb-4" style={{ fontFamily: 'VT323, monospace' }}>
+              Научись программировать в стиле 80-х с современными технологиями ✨
             </p>
+            <div className="inline-block bg-secondary/60 px-6 py-2 rounded-lg mb-6 border-2 border-primary">
+              <span className="text-lg font-bold text-primary" style={{ fontFamily: 'VT323, monospace' }}>⚡ ПЕРВОЕ ЗАНЯТИЕ БЕСПЛАТНО! ⚡</span>
+            </div>
           </div>
           <div className="flex gap-4 justify-center flex-wrap">
-            <Button size="lg" className="text-sm" style={{ fontFamily: 'Press Start 2P, monospace' }}>
-              Начать обучение
+            <Button size="lg" className="text-sm hover:scale-110 hover:rotate-2 transition-all" style={{ fontFamily: 'Press Start 2P, monospace' }}>
+              🎯 Начать обучение
             </Button>
-            <Button size="lg" variant="outline" className="text-sm" style={{ fontFamily: 'Press Start 2P, monospace' }}>
+            <Button size="lg" variant="outline" className="text-sm hover:scale-110 hover:-rotate-2 transition-all" style={{ fontFamily: 'Press Start 2P, monospace' }}>
               <Icon name="Play" className="mr-2" size={16} />
-              Демо урок
+              🔥 Демо урок
             </Button>
           </div>
         </section>
@@ -65,7 +68,7 @@ const Index = () => {
                   </div>
                   <p className="text-lg" style={{ fontFamily: 'Open Sans, sans-serif' }}>
                     Мы учим программированию через призму классических технологий, 
-                    показывая эволюцию от простого к сложному.
+                    показывая эволюцию от простого к сложному. 💾 (дискеты прилагаются!)
                   </p>
                 </div>
                 <div>
@@ -77,7 +80,7 @@ const Index = () => {
                   </div>
                   <p className="text-lg" style={{ fontFamily: 'Open Sans, sans-serif' }}>
                     При этом вы получаете актуальные знания востребованных 
-                    языков программирования и фреймворков.
+                    языков программирования и фреймворков. 🐛 (багов в подарок не прилагается!)
                   </p>
                 </div>
                 <div>
@@ -101,7 +104,7 @@ const Index = () => {
                   </div>
                   <p className="text-lg" style={{ fontFamily: 'Open Sans, sans-serif' }}>
                     По окончании курса вы получаете сертификат 
-                    и портфолио выполненных проектов.
+                    и портфолио выполненных проектов. 🏆 (можно повесить на стену!)
                   </p>
                 </div>
               </div>
