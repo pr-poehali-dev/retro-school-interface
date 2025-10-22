@@ -1,5 +1,8 @@
-import Header from '@/components/Header';
-import Icon from '@/components/ui/icon';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import Icon from "@/components/ui/icon";
+import { Link } from "react-router-dom";
 
 const Schedule = () => {
   const courses = [
@@ -55,7 +58,28 @@ const Schedule = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Header />
+      <header className="border-b-4 border-primary py-6 px-4 sm:px-8 bg-card shadow-lg">
+        <div className="max-w-6xl mx-auto">
+          <div className="flex items-center justify-between">
+            <Link to="/">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold" style={{ fontFamily: 'VT323, monospace' }}>
+                CODING SCHOOL
+              </h1>
+            </Link>
+            <nav className="hidden sm:flex gap-6" style={{ fontFamily: 'Press Start 2P, monospace' }}>
+              <Link to="/" className="text-xs hover:text-primary transition-colors">
+                Главная
+              </Link>
+              <Link to="/schedule" className="text-xs text-primary">
+                Расписание
+              </Link>
+              <Link to="/contacts" className="text-xs hover:text-primary transition-colors">
+                Контакты
+              </Link>
+            </nav>
+          </div>
+        </div>
+      </header>
       
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-12">

@@ -1,130 +1,194 @@
-import Header from '@/components/Header';
-import Icon from '@/components/ui/icon';
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import Icon from "@/components/ui/icon";
+import { Link } from "react-router-dom";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
-      <Header />
-      
-      <section className="py-16 bg-gradient-to-b from-secondary/20 to-background">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 text-primary">
-            Школа Программирования
-          </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-            Изучайте код в атмосфере ретро. Проверенные временем методики обучения с современным подходом
-          </p>
-          <div className="flex gap-4 justify-center">
-            <button className="px-8 py-4 bg-primary text-primary-foreground font-bold rounded-lg shadow-lg hover:shadow-xl transition-all hover:scale-105 border-2 border-primary">
-              Записаться на курс
-            </button>
-            <button className="px-8 py-4 bg-secondary text-secondary-foreground font-bold rounded-lg shadow-lg hover:shadow-xl transition-all hover:scale-105 border-2 border-secondary">
-              Узнать больше
-            </button>
+      <header className="border-b-4 border-primary py-6 px-4 sm:px-8 bg-card shadow-lg">
+        <div className="max-w-6xl mx-auto">
+          <div className="flex items-center justify-between">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold" style={{ fontFamily: 'VT323, monospace' }}>
+              CODING SCHOOL
+            </h1>
+            <nav className="hidden sm:flex gap-6" style={{ fontFamily: 'Press Start 2P, monospace' }}>
+              <Link to="/" className="text-xs text-primary">
+                Главная
+              </Link>
+              <Link to="/schedule" className="text-xs hover:text-primary transition-colors">
+                Расписание
+              </Link>
+              <Link to="/contacts" className="text-xs hover:text-primary transition-colors">
+                Контакты
+              </Link>
+            </nav>
           </div>
         </div>
-      </section>
+      </header>
 
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-12 text-primary">О нас</h2>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-card p-8 rounded-lg shadow-lg border-4 border-accent/30 hover:border-primary/50 transition-all">
-              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4 mx-auto">
-                <Icon name="Users" size={32} className="text-primary" />
-              </div>
-              <h3 className="text-2xl font-bold text-center mb-4 text-primary">Опытные преподаватели</h3>
-              <p className="text-center text-muted-foreground">
-                Наши учителя — практикующие разработчики с опытом работы более 10 лет в индустрии
-              </p>
-            </div>
-
-            <div className="bg-card p-8 rounded-lg shadow-lg border-4 border-secondary/30 hover:border-primary/50 transition-all">
-              <div className="w-16 h-16 bg-secondary/20 rounded-full flex items-center justify-center mb-4 mx-auto">
-                <Icon name="BookOpen" size={32} className="text-primary" />
-              </div>
-              <h3 className="text-2xl font-bold text-center mb-4 text-primary">Проверенная программа</h3>
-              <p className="text-center text-muted-foreground">
-                Учебный план, основанный на реальных проектах и требованиях современного рынка труда
-              </p>
-            </div>
-
-            <div className="bg-card p-8 rounded-lg shadow-lg border-4 border-muted/30 hover:border-primary/50 transition-all">
-              <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mb-4 mx-auto">
-                <Icon name="Award" size={32} className="text-primary" />
-              </div>
-              <h3 className="text-2xl font-bold text-center mb-4 text-primary">Сертификаты</h3>
-              <p className="text-center text-muted-foreground">
-                После окончания курса выдаём официальный сертификат, признанный работодателями
-              </p>
-            </div>
+      <main className="max-w-6xl mx-auto px-4 sm:px-8 py-12">
+        <section className="mb-20 text-center animate-fade-in">
+          <div className="mb-8">
+            <h2 className="text-4xl sm:text-6xl md:text-7xl mb-6" style={{ fontFamily: 'Press Start 2P, monospace', lineHeight: '1.3' }}>
+              # Unlock the Secrets of Code
+            </h2>
+            <p className="text-xl sm:text-2xl text-muted-foreground mb-8" style={{ fontFamily: 'VT323, monospace' }}>
+              Научись программировать в стиле 80-х с современными технологиями
+            </p>
           </div>
-        </div>
-      </section>
+          <div className="flex gap-4 justify-center flex-wrap">
+            <Button size="lg" className="text-sm" style={{ fontFamily: 'Press Start 2P, monospace' }}>
+              Начать обучение
+            </Button>
+            <Button size="lg" variant="outline" className="text-sm" style={{ fontFamily: 'Press Start 2P, monospace' }}>
+              <Icon name="Play" className="mr-2" size={16} />
+              Демо урок
+            </Button>
+          </div>
+        </section>
 
-      <section className="py-16 bg-gradient-to-b from-background to-muted/20">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <h2 className="text-4xl font-bold text-center mb-12 text-primary">Часто задаваемые вопросы</h2>
-          
-          <Accordion type="single" collapsible className="space-y-4">
-            <AccordionItem value="item-1" className="bg-card border-4 border-accent/30 rounded-lg px-6">
-              <AccordionTrigger className="text-lg font-semibold text-foreground hover:text-primary">
-                Нужен ли опыт в программировании?
+        <section className="mb-20 animate-fade-in">
+          <h2 className="text-3xl sm:text-4xl mb-8 text-center" style={{ fontFamily: 'VT323, monospace' }}>
+            О нашей школе
+          </h2>
+          <Card className="border-4 border-primary shadow-lg">
+            <CardContent className="p-8">
+              <div className="grid sm:grid-cols-2 gap-8">
+                <div>
+                  <div className="flex items-center gap-3 mb-4">
+                    <Icon name="Code" size={32} className="text-primary" />
+                    <h3 className="text-2xl" style={{ fontFamily: 'VT323, monospace' }}>
+                      Ретро подход
+                    </h3>
+                  </div>
+                  <p className="text-lg" style={{ fontFamily: 'Open Sans, sans-serif' }}>
+                    Мы учим программированию через призму классических технологий, 
+                    показывая эволюцию от простого к сложному.
+                  </p>
+                </div>
+                <div>
+                  <div className="flex items-center gap-3 mb-4">
+                    <Icon name="Sparkles" size={32} className="text-secondary" />
+                    <h3 className="text-2xl" style={{ fontFamily: 'VT323, monospace' }}>
+                      Современные навыки
+                    </h3>
+                  </div>
+                  <p className="text-lg" style={{ fontFamily: 'Open Sans, sans-serif' }}>
+                    При этом вы получаете актуальные знания востребованных 
+                    языков программирования и фреймворков.
+                  </p>
+                </div>
+                <div>
+                  <div className="flex items-center gap-3 mb-4">
+                    <Icon name="Users" size={32} className="text-accent" />
+                    <h3 className="text-2xl" style={{ fontFamily: 'VT323, monospace' }}>
+                      Сообщество
+                    </h3>
+                  </div>
+                  <p className="text-lg" style={{ fontFamily: 'Open Sans, sans-serif' }}>
+                    Присоединяйтесь к комьюнити энтузиастов, которые любят 
+                    как винтажную эстетику, так и современный код.
+                  </p>
+                </div>
+                <div>
+                  <div className="flex items-center gap-3 mb-4">
+                    <Icon name="Trophy" size={32} className="text-muted-foreground" />
+                    <h3 className="text-2xl" style={{ fontFamily: 'VT323, monospace' }}>
+                      Сертификация
+                    </h3>
+                  </div>
+                  <p className="text-lg" style={{ fontFamily: 'Open Sans, sans-serif' }}>
+                    По окончании курса вы получаете сертификат 
+                    и портфолио выполненных проектов.
+                  </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </section>
+
+        <section className="mb-20 animate-fade-in">
+          <h2 className="text-3xl sm:text-4xl mb-8 text-center" style={{ fontFamily: 'VT323, monospace' }}>
+            Часто задаваемые вопросы
+          </h2>
+          <Accordion type="single" collapsible className="w-full max-w-3xl mx-auto">
+            <AccordionItem value="item-1" className="border-2 border-primary mb-4 px-6 rounded-lg bg-card">
+              <AccordionTrigger className="text-xl hover:no-underline" style={{ fontFamily: 'VT323, monospace' }}>
+                Нужен ли опыт программирования?
               </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground">
-                Нет, наши курсы подходят для начинающих. Мы начинаем с основ и постепенно переходим к более сложным темам. Главное — желание учиться!
+              <AccordionContent className="text-lg pt-4" style={{ fontFamily: 'Open Sans, sans-serif' }}>
+                Нет, наши курсы подходят для начинающих. Мы начинаем с основ 
+                и постепенно переходим к более сложным темам.
               </AccordionContent>
             </AccordionItem>
 
-            <AccordionItem value="item-2" className="bg-card border-4 border-secondary/30 rounded-lg px-6">
-              <AccordionTrigger className="text-lg font-semibold text-foreground hover:text-primary">
-                Какова длительность обучения?
+            <AccordionItem value="item-2" className="border-2 border-primary mb-4 px-6 rounded-lg bg-card">
+              <AccordionTrigger className="text-xl hover:no-underline" style={{ fontFamily: 'VT323, monospace' }}>
+                Какие языки программирования вы преподаете?
               </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground">
-                Базовый курс длится 6 месяцев при занятиях 3 раза в неделю. Также есть интенсивные программы на 3 месяца и расширенные на год.
+              <AccordionContent className="text-lg pt-4" style={{ fontFamily: 'Open Sans, sans-serif' }}>
+                Мы предлагаем курсы по Python, JavaScript, TypeScript, React, 
+                а также основам веб-разработки (HTML, CSS).
               </AccordionContent>
             </AccordionItem>
 
-            <AccordionItem value="item-3" className="bg-card border-4 border-primary/30 rounded-lg px-6">
-              <AccordionTrigger className="text-lg font-semibold text-foreground hover:text-primary">
-                Помогаете ли с трудоустройством?
+            <AccordionItem value="item-3" className="border-2 border-primary mb-4 px-6 rounded-lg bg-card">
+              <AccordionTrigger className="text-xl hover:no-underline" style={{ fontFamily: 'VT323, monospace' }}>
+                Сколько длится обучение?
               </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground">
-                Да! У нас есть карьерный центр, который помогает составить резюме, подготовиться к собеседованиям и связывает с компаниями-партнёрами.
+              <AccordionContent className="text-lg pt-4" style={{ fontFamily: 'Open Sans, sans-serif' }}>
+                Продолжительность зависит от курса: базовые курсы — 2-3 месяца, 
+                продвинутые — до 6 месяцев. Занятия проходят 2-3 раза в неделю.
               </AccordionContent>
             </AccordionItem>
 
-            <AccordionItem value="item-4" className="bg-card border-4 border-muted/30 rounded-lg px-6">
-              <AccordionTrigger className="text-lg font-semibold text-foreground hover:text-primary">
-                Можно ли учиться онлайн?
+            <AccordionItem value="item-4" className="border-2 border-primary mb-4 px-6 rounded-lg bg-card">
+              <AccordionTrigger className="text-xl hover:no-underline" style={{ fontFamily: 'VT323, monospace' }}>
+                Есть ли у вас онлайн формат?
               </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground">
-                Да, все наши курсы доступны в онлайн-формате с возможностью участия в живых занятиях или просмотра записей в удобное время.
+              <AccordionContent className="text-lg pt-4" style={{ fontFamily: 'Open Sans, sans-serif' }}>
+                Да, все наши курсы доступны как в онлайн, так и в офлайн форматах. 
+                Вы можете выбрать удобный для вас вариант.
               </AccordionContent>
             </AccordionItem>
 
-            <AccordionItem value="item-5" className="bg-card border-4 border-accent/30 rounded-lg px-6">
-              <AccordionTrigger className="text-lg font-semibold text-foreground hover:text-primary">
-                Какие языки программирования вы преподаёте?
+            <AccordionItem value="item-5" className="border-2 border-primary mb-4 px-6 rounded-lg bg-card">
+              <AccordionTrigger className="text-xl hover:no-underline" style={{ fontFamily: 'VT323, monospace' }}>
+                Помогаете ли вы с трудоустройством?
               </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground">
-                Мы обучаем Python, JavaScript, Java, C++ и Go. Также есть специализированные курсы по веб-разработке, мобильной разработке и Data Science.
+              <AccordionContent className="text-lg pt-4" style={{ fontFamily: 'Open Sans, sans-serif' }}>
+                Да, мы помогаем составить резюме, подготовиться к собеседованиям 
+                и предоставляем контакты партнерских компаний для трудоустройства.
               </AccordionContent>
             </AccordionItem>
           </Accordion>
-        </div>
-      </section>
+        </section>
 
-      <footer className="bg-card border-t-4 border-primary/30 py-8 mt-16">
-        <div className="container mx-auto px-4 text-center">
-          <p className="text-muted-foreground">© 2024 CodeSchool. Все права защищены.</p>
+        <section className="text-center py-16 bg-secondary/20 rounded-3xl border-4 border-secondary animate-fade-in">
+          <h2 className="text-3xl sm:text-4xl mb-6" style={{ fontFamily: 'Press Start 2P, monospace' }}>
+            Готовы начать?
+          </h2>
+          <p className="text-xl mb-8" style={{ fontFamily: 'VT323, monospace' }}>
+            Присоединяйтесь к нашей школе и начните карьеру в IT
+          </p>
+          <Link to="/contacts">
+            <Button size="lg" className="text-sm" style={{ fontFamily: 'Press Start 2P, monospace' }}>
+              Записаться на курс
+            </Button>
+          </Link>
+        </section>
+      </main>
+
+      <footer className="border-t-4 border-primary py-8 px-4 sm:px-8 mt-20 bg-card">
+        <div className="max-w-6xl mx-auto text-center">
+          <p className="text-lg" style={{ fontFamily: 'VT323, monospace' }}>
+            © 2024 CODING SCHOOL. Все права защищены.
+          </p>
+          <p className="text-sm text-muted-foreground mt-2" style={{ fontFamily: 'VT323, monospace' }}>
+            Made with 💜 in retro style
+          </p>
         </div>
       </footer>
     </div>
