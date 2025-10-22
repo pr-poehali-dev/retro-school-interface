@@ -1,9 +1,10 @@
-import Layout from '@/components/Layout';
+import Header from '@/components/Header';
 import Icon from '@/components/ui/icon';
 
 const Contacts = () => {
   return (
-    <Layout>
+    <div className="min-h-screen bg-background">
+      <Header />
       <div className="container mx-auto px-4 py-16">
         <h1 className="text-5xl font-bold text-center mb-4 text-foreground">Контакты</h1>
         <p className="text-center text-muted-foreground mb-12 text-lg">
