@@ -54,6 +54,61 @@ const Index = () => {
 
         <section className="mb-20 animate-fade-in">
           <h2 className="text-3xl sm:text-4xl mb-8 text-center" style={{ fontFamily: 'VT323, monospace' }}>
+            Наши коты-преподаватели 😸
+          </h2>
+          <div className="grid sm:grid-cols-3 gap-6 mb-12">
+            <Card className="border-4 border-primary shadow-lg hover:scale-105 transition-transform">
+              <CardContent className="p-4">
+                <img 
+                  src="https://cdn.poehali.dev/projects/747d7ce5-82d5-4ff6-849b-5c972456c8ab/files/55c1b081-31b8-4346-8c70-4db324823683.jpg" 
+                  alt="Кот программист"
+                  className="w-full h-48 object-cover rounded mb-3"
+                />
+                <p className="text-center text-lg font-bold" style={{ fontFamily: 'VT323, monospace' }}>
+                  Профессор Мурзик 🤓
+                </p>
+                <p className="text-center text-sm text-muted-foreground">
+                  Эксперт по отладке кода
+                </p>
+              </CardContent>
+            </Card>
+            
+            <Card className="border-4 border-primary shadow-lg hover:scale-105 transition-transform">
+              <CardContent className="p-4">
+                <img 
+                  src="https://cdn.poehali.dev/projects/747d7ce5-82d5-4ff6-849b-5c972456c8ab/files/8e1ec2a0-5883-4809-b476-3cfdf31afb05.jpg" 
+                  alt="Кот спит на клавиатуре"
+                  className="w-full h-48 object-cover rounded mb-3"
+                />
+                <p className="text-center text-lg font-bold" style={{ fontFamily: 'VT323, monospace' }}>
+                  Сеньор Васька 😴
+                </p>
+                <p className="text-center text-sm text-muted-foreground">
+                  Мастер перерывов на кофе
+                </p>
+              </CardContent>
+            </Card>
+            
+            <Card className="border-4 border-primary shadow-lg hover:scale-105 transition-transform">
+              <CardContent className="p-4">
+                <img 
+                  src="https://cdn.poehali.dev/projects/747d7ce5-82d5-4ff6-849b-5c972456c8ab/files/6d9879aa-1670-4dbb-89c3-01d9b852054e.jpg" 
+                  alt="Кот дебажит код"
+                  className="w-full h-48 object-cover rounded mb-3"
+                />
+                <p className="text-center text-lg font-bold" style={{ fontFamily: 'VT323, monospace' }}>
+                  Багхантер Барсик 🎧
+                </p>
+                <p className="text-center text-sm text-muted-foreground">
+                  Специалист по поиску багов
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </section>
+
+        <section className="mb-20 animate-fade-in">
+          <h2 className="text-3xl sm:text-4xl mb-8 text-center" style={{ fontFamily: 'VT323, monospace' }}>
             О нашей школе
           </h2>
           <Card className="border-4 border-primary shadow-lg">
