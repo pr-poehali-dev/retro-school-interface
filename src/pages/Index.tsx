@@ -154,6 +154,9 @@ const Index = () => {
               <AccordionContent className="text-lg pt-4" style={{ fontFamily: 'Open Sans, sans-serif' }}>
                 Да, все наши курсы доступны как в онлайн, так и в офлайн форматах. 
                 Вы можете выбрать удобный для вас вариант.
+                <div className="mt-3 p-3 bg-purple-100 rounded border-2 border-purple-300 text-sm">
+                  🏠 <strong>Онлайн формат:</strong> можно учиться в пижаме (камеру включать необязательно 🙈)
+                </div>
               </AccordionContent>
             </AccordionItem>
 
@@ -164,9 +167,52 @@ const Index = () => {
               <AccordionContent className="text-lg pt-4" style={{ fontFamily: 'Open Sans, sans-serif' }}>
                 Да, мы помогаем составить резюме, подготовиться к собеседованиям 
                 и предоставляем контакты партнерских компаний для трудоустройства.
+                <div className="mt-3 p-3 bg-green-100 rounded border-2 border-green-300 text-sm">
+                  💼 <strong>Лайфхак:</strong> Напиши в резюме "умею Stack Overflow" — работодатели оценят честность! 😂
+                </div>
               </AccordionContent>
             </AccordionItem>
           </Accordion>
+        </section>
+
+        <section className="mb-20 animate-fade-in">
+          <h2 className="text-3xl sm:text-4xl mb-8 text-center" style={{ fontFamily: 'VT323, monospace' }}>
+            🎭 Мемы от программистов
+          </h2>
+          <div className="grid md:grid-cols-3 gap-6 mb-12">
+            <Card className="border-4 border-yellow-400 bg-yellow-50 transform hover:rotate-2 transition-all">
+              <CardContent className="p-6 text-center">
+                <div className="text-6xl mb-4">☕</div>
+                <p className="text-lg font-bold mb-2">Программист без кофе</p>
+                <p className="text-sm text-muted-foreground">= компьютер без электричества</p>
+                <div className="mt-4 text-xs bg-white p-2 rounded border-2 border-yellow-300">
+                  Статус: Не работает 😴
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-4 border-pink-400 bg-pink-50 transform hover:-rotate-2 transition-all">
+              <CardContent className="p-6 text-center">
+                <div className="text-6xl mb-4">🐛</div>
+                <p className="text-lg font-bold mb-2">Не баг, а фича!</p>
+                <p className="text-sm text-muted-foreground">99 багов в коде, убрал один — теперь 127 багов 🤷</p>
+                <div className="mt-4 text-xs bg-white p-2 rounded border-2 border-pink-300">
+                  Классика жанра 😂
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-4 border-blue-400 bg-blue-50 transform hover:rotate-1 transition-all">
+              <CardContent className="p-6 text-center">
+                <div className="text-6xl mb-4">💻</div>
+                <p className="text-lg font-bold mb-2">Ctrl + C, Ctrl + V</p>
+                <p className="text-sm text-muted-foreground">Самые важные команды программиста!</p>
+                <div className="mt-4 text-xs bg-white p-2 rounded border-2 border-blue-300">
+                  Stack Overflow — лучший друг 🤝
+                </div>
+              </CardContent>
+            </Card>
+          </div>
         </section>
 
         <section className="text-center py-16 bg-secondary/20 rounded-3xl border-4 border-secondary animate-fade-in">
